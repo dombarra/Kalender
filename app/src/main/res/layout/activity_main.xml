@@ -16,33 +16,21 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/calendarView">
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:id="@+id/WerbungLayout"
             android:layout_weight="1"
-            android:layout_height="300dp">
+            android:layout_height="wrap_content">
 
-            <CalendarView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/calendarView"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:isScrollContainer="true"
-                android:keepScreenOn="true"
-                android:soundEffectsEnabled="true" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg2"
             android:layout_weight="100">
 
             <TextView
@@ -51,16 +39,32 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
                 android:gravity="center"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/background_light"
+                android:textSize="30sp" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|number|numberSigned|numberDecimal|numberPassword|phone|datetime|date|time"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
                 android:ems="10"
                 android:id="@+id/editText"
-                android:textColor="@android:color/black" />
+                android:background="@drawable/bg2"
+                android:textColor="@android:color/black"
+                android:gravity="top|left" />
+
         </LinearLayout>
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:id="@+id/calendarView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:isScrollContainer="true"
+            android:keepScreenOn="true"
+            android:soundEffectsEnabled="true"
+            android:layout_weight="1"
+            android:layout_height="200dp" />
 
     </LinearLayout>
 
